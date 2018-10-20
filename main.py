@@ -1,7 +1,7 @@
 import stats
 
 def main():
-    stats.createStats();
+    stats.createStats(True);
     return None;
 
 if __name__ == "__main__":

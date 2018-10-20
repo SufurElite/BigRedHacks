@@ -1,0 +1,24 @@
+{
+"Name":"Nick",
+"Number of Essays":5,
+"Average Sentence Length":22.80483682983683,
+"Average # of Parentheticals":1.0,
+"Average # of dependent clauses":16.0,
+"Average # of Semicolons":2.0,
+"Average Essay Lexical Diversity":0.010218064427762904,
+"Average Total Lexical Diversity":0.0016669287623840227,
+"Vocabulary":["will","until","started",";","she","good","prince","time","play","help","brothers","around","anything","however","are","so","now","still","its","autism","airplane","other","never","crime","lawrence","years","really","way","my","has","been","who","laws","should","much","if","how","first","airplanes","which","romeo","make","when","do","friar","not","can","about","world","one","after","from","our","guns","also","what","an","were","gun","than","like","at","their","even","just","had","by","because","them","all","there","this","i","he","as","or","with","would","on","is","more","we","you","but","people","was","have","they","be","for","that","it","a","in","of","and","to",".","the",","],
+"Vocabulary Frequency":[
+2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.2,2.2,2.2,2.2,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.6,2.6,2.6,2.6,2.8,2.8,2.8,2.8,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.2,3.2,3.2,3.4,3.4,3.6,3.6,3.6,3.6,3.8,3.8,3.8,4.2,4.4,4.4,4.4,4.6,4.6,4.6,4.6,4.8,4.8,5.0,5.0,5.0,5.2,5.2,5.2,5.2,5.4,5.4,5.4,5.8,5.8,6.0,6.2,6.4,6.6,7.0,7.0,7.2,7.4,7.6,7.8,8.0,8.0,8.4,8.6,8.8,8.8,8.8,9.8,10.0,12.0,13.8,15.0,20.8,21.2,23.2,29.2,34.2,47.6,62.0,67.2
+],
+"Bigram":[
+"for a","the best","because it","as well","way we","most people","the kind","world war","it was","had a","united states","there is","by the","to a","be a","because of","at the","from the","because they","kind of","they were","the wright","to get","more than","this is","have been","you can","in a","even though","to be","to help","romeo and","and juliet","wright brothers","with the","to make","i was","the way","the prince","the airplane","the world","would be","the first","for the","and the","friar lawrence","to the","on the","in the","of the"],
+"Bigram Frequency":[
+1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.4,1.4,1.4,1.4,1.4,1.4,1.6,1.6,1.6,1.6,1.6,1.6,1.8,1.8,1.8,1.8,1.8,2.0,2.2,2.2,2.2,2.4,2.6,2.6,2.8,3.2,4.8,5.4
+],
+"Trigram":[
+"the two brothers","airplanes have had","because of all","of all the","war i and","by creating jobs","creating jobs and","world war ii","we would be","would be living","the first woman","first woman to","wright brothers day","shows how much","rise as an","as an economic","an economic superpower","it is today","afford to pay","to pay for","have even been","a total of","impact on our","there would be","the fact that","the u s","when i was","the first time","i was n't","that even though","you have to","people who have","to help them","one hundred years","the invention of","invention of the","way we fight","we fight wars","world war i","if it werent","it werent for","werent for the","for the airplane","would be a","the kind of","of the airplane","the way we","the united states","the wright brothers","romeo and juliet"],
+"Trigram Frequency":[
+0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.8,0.8,0.8,0.8,1.0,1.2,1.6
+]
+}

@@ -1,4 +1,4 @@
-import os, re, nltk
+import os, re, nltk, json
 from nltk.tokenize import word_tokenize
 
 def getAverageSentenceLength(text):
@@ -41,9 +41,6 @@ def getVocab(text):
     vocab.sort(key=lambda tup: tup[1])
     vocab = vocab[-100:]
     return vocab;
-
-def getKey():
-    return 1;
 
 def getTopBigrams(text):
     text = text.replace('.', ' ').replace('(',' ').replace(')', ' ').replace(',', ' ').replace('?',' ').replace('!', ' ').replace('[', ' ').replace(']', ' ')
@@ -152,10 +149,14 @@ def Average_Stats(Essay_Stats):
     return Average_Stats;
 
 
-def writeAverageStats(Average_Stats):
+def writeAverageStats(Average_Stats, JSON_Avg_Paths):
     for i in range(len(Average_Stats)):
         name = Average_Stats[i][0][Average_Stats[i][0].rfind('\\')+1:]
         f = open(Average_Stats[i][0]+"\\"+name+"AvgStats.json", 'w')
+        temp = []
+        temp.append(name)
+        temp.append(Average_Stats[i][0]+"\\"+name+"AvgStats.json")
+        JSON_Avg_Paths.append(temp)
         count = Average_Stats[i][7]
         f.write("{\n\"Name\":\""+name+"\",")
         f.write("\n\"Number of Essays\":"+str(count)+",")
@@ -204,7 +205,91 @@ def writeAverageStats(Average_Stats):
     return True;
 
 
-def createStats():
+
+def CreateDifferentials(Target_Data, Given_Values, i):
+    name = Given_Values[i][0][Given_Values[i][0].rfind('\\')+1:]
+
+    if(Target_Data['Name']==name):
+        Target=1
+    else:
+        Target=0
+    diffInSentenceLength = Target_Data['Average Sentence Length']-Given_Values[i][2]
+    diffInParentheticals = Target_Data['Average # of Parentheticals']-Given_Values[i][3]
+    diffInDependent = Target_Data['Average # of dependent clauses']-Given_Values[i][4]
+    diffInSemicolons = Target_Data['Average # of Semicolons']-Given_Values[i][5]
+    diffInEssayLexicalDiversity = Target_Data['Average Essay Lexical Diversity']-Given_Values[i][6]
+    diffInTotalLexicalDiversity = Target_Data['Average Total Lexical Diversity']-Given_Values[i][6]
+    file = open(Given_Values[i][1], "r",encoding='utf-8', errors='ignore')
+    text= file.read()
+    X_Vocab = getVocab(text);
+    Y_Vocab = Target_Data['Vocabulary']
+    X_Bigrams = getTopBigrams(text)
+    Y_Bigrams = Target_Data['Bigram']
+    X_Trigram = getTopTrigrams(text)
+    Y_Trigram = Target_Data['Trigram']
+    vocab_percentage = 0;
+    for i in range(len(Y_Vocab)):
+        if(Y_Vocab[i]==X_Vocab[i][0]):
+            vocab_percentage+=1;
+    vocab_percentage/=len(Y_Vocab);
+    bigram_percentage = 0;
+    for i in range(len(Y_Bigrams)):
+        if(Y_Bigrams[i][0]==X_Bigrams[i][0]):
+            bigram_percentage+=1;
+    bigram_percentage/=len(Y_Bigrams)
+    trigram_percentage = 0;
+    for i in range(len(Y_Trigram)):
+        if(Y_Trigram[i]==X_Trigram[i][0]):
+            trigram_percentage+=1;
+    trigram_percentage/=len(Y_Trigram);
+    X = [diffInSentenceLength,diffInParentheticals,diffInDependent,diffInSemicolons, diffInEssayLexicalDiversity,diffInTotalLexicalDiversity, vocab_percentage, bigram_percentage, trigram_percentage]
+    return X, Target;
+
+def WriteTrainingJson(path, X_Values, Target):
+    file = open(path, 'w')
+    file.write("{\n\t\"Title\":\"Starting Dataset\",")
+    file.write("\n\t\"Desc\":\"Dataset based on statistics from essays for the BigRedHackathon\",")
+    file.write("\n\t\"Data\":[")
+    for i in range(len(X_Values)):
+        if(i!=len(X_Values)-1):
+            file.write(str(X_Values[i])+",")
+        else:
+            file.write(str(X_Values[i])+"\n],")
+    file.write("\n\t\"Target\":[")
+    for i in range(len(Target)):
+        if(i!=len(Target)-1):
+            file.write(str(Target[i])+",")
+        else:
+            file.write(str(Target[i])+"\n]\n}")
+    return None;
+
+def CreateInput(JSON_Avg_Paths):
+    dir_path = os.path.dirname(os.path.realpath(__file__)) + "\\Docs"
+    curr_person = ""
+    Essay_Stats = []
+    for subdir, dirs, files in os.walk(dir_path):
+        if(subdir!=curr_person and subdir[-4:]!="Docs"):
+            curr_person = subdir;
+        for file in files:
+            if(file[-4:]!="json"):
+                Essay_Stats.append(statForEssay(curr_person, subdir, file));
+    Target = []
+    X_Values = []
+    for i in range(len(JSON_Avg_Paths)):
+        with open(JSON_Avg_Paths[i][1]) as j_file:
+            data = json.load(j_file)
+        for j in range(len(Essay_Stats)):
+            temp_X=[]
+            temp_Y=0
+            temp_X, temp_Y=CreateDifferentials(data,Essay_Stats, j)
+            X_Values.append(temp_X)
+            Target.append(temp_Y)
+    WriteTrainingJson(dir_path+"\\startingDataset.json",X_Values, Target)
+    print(X_Values)
+    print(Target)
+    return None;
+
+def createStats(inputFile):
     dir_path = os.path.dirname(os.path.realpath(__file__)) + "\\Docs"
     curr_person = ""
     Essay_stats = []
@@ -217,9 +302,13 @@ def createStats():
             #print(os.path.join(subdir, file))
     print("\n")
     average_stats = Average_Stats(Essay_stats)
-
+    '''
     for i in range(len(average_stats)):
         for j in range(len(average_stats[i])):
             print(str(average_stats[i][j]))
-
-    return writeAverageStats(average_stats);
+    '''
+    JSON_Avg_Paths = []
+    writeAverageStats(average_stats, JSON_Avg_Paths);
+    if(inputFile):
+        CreateInput(JSON_Avg_Paths);
+    return None;

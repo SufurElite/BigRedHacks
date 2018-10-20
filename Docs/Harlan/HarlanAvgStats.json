@@ -1,0 +1,24 @@
+{
+"Name":"Harlan",
+"Number of Essays":4,
+"Average Sentence Length":19.088648648648647,
+"Average # of Parentheticals":0.0,
+"Average # of dependent clauses":6.0,
+"Average # of Semicolons":1.0,
+"Average Essay Lexical Diversity":0.017793603791766283,
+"Average Total Lexical Diversity":0.003656135745757945,
+"Vocabulary":["living","scarlet","puritan","deceives","town","punished","how","natural","would","story","discoveries","dulce","et","decorum","est","while","about","use","language","reinforce","soldiers","only","over","attitude","more","like",";","it","him","book","been","diction","rest","were","protect","contributes","she","city","are","describes","place","poem","reader","not","father","mccarthy","patterns","than","tone","speakers","was","time","tunnel","audience","shows","humanity","law","owen","these","personification","because","sassoon","from","both","vivid","with","trout","universe","have",":","hester","deception","their","speaker","sin","also","has","for","he","imagery","by","uses","kabul","war","his","her","on","dimmesdale","this","as","that","is","in","a","to","and","of",".",",","the"],
+"Vocabulary Frequency":[
+0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.75,1.75,1.75,1.75,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.25,2.25,2.25,2.25,2.5,2.5,2.5,2.5,2.5,2.75,2.75,3.25,3.25,3.25,3.25,3.5,3.5,3.5,3.75,4.0,4.25,4.75,5.75,7.0,7.25,8.75,10.75,15.0,20.0,23.5,24.0,35.5
+],
+"Bigram":[
+"of sin","from the","uses imagery","there is","of these","and his","patterns of","on their","their backs","over time","that he","hester is","protect dimmesdale","her deception","deception dimmesdale","her sin","deception contributes","sin and","of kabul","kabul as","dulce et","et decorum","decorum est","vivid imagery","by the","the audience","is a","the book","the rest","rest of","to protect","contributes to","dimmesdale is","kabul is","and the","the poem","the reader","also uses","shows that","the speakers","of war","imagery and","the trout","on the","that the","to the","the universe","the speaker","in the","of the"],
+"Bigram Frequency":[
+0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.25,1.25,1.25,1.25,1.25,1.25,1.5,1.5,1.5,1.75,1.75,2.0,2.0,2.5,2.75,4.5
+],
+"Trigram":[
+"figures of speech","language to reinforce","the poem the","poem the speaker","of his fellow","of the poem","focuses more on","more on the","on the brutality","the brutality of","vivid imagery to","evoke strong emotions","to describe the","in the tunnel","also uses imagery","there is a","humanity and the","and the universe","of the novel","the trout have","effect on the","on the universe","of the world","patterns of the","of the universe","of the book","shows that the","the scarlet letter","her deception dimmesdale","as well as","to sin is","is punished by","to the story","of sin and","sin and law","the speakers discoveries","to portray the","portray the speakers","imagery and personification","both owen and","owen and sassoon","on their backs","to protect dimmesdale","deception contributes to","that the speaker","dulce et decorum","et decorum est","the rest of","rest of the","contributes to the"],
+"Trigram Frequency":[
+0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0
+]
+}
