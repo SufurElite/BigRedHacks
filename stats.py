@@ -117,10 +117,17 @@ def partsOfSpeech(text):
     return adjective, preposition, adverb, there, comparative,superlative, modal,conjunc,personal_pro,adv_comp,deter,present_part;
 
 def statForEssay(name, subdir, t_file):
-    file = open(subdir+"\\"+t_file, "r",encoding='utf-8', errors='ignore')
+    if(t_file!=""):
+        file = open(subdir+"\\"+t_file, "r",encoding='utf-8', errors='ignore')
+    else:
+        file = open(subdir, "r",encoding='utf-8', errors='ignore')
+
     Stats = [];
     Stats.append(name);
-    Stats.append(subdir+"\\"+t_file)
+    if(t_file!=""):
+        Stats.append(subdir+"\\"+t_file)
+    else:
+        Stats.append(subdir)
     text = file.read()
     Stats.append(getAverageSentenceLength(text))
     Stats.append(getAverageParentheticals(text))

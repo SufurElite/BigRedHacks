@@ -1,7 +1,7 @@
 import stats, machineLearning
 
 def main():
-    stats.createStats(True);
+    #stats.createStats(True);
     machineLearning.graph(True);
     #machineLearning.trainModel(False);
 

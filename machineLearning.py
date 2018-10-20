@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV, validation_curve, learning_curve, train_test_split, ShuffleSplit
 import matplotlib.pyplot as plt
 import numpy as np
-import os, json, pickle
+import os, json, pickle, stats
 
 def getBestParameters(X_train, y_train, X_test, y_test):
     learning_algorithm = SVC(kernel='linear', random_state = 42, verbose=False)
@@ -81,7 +81,7 @@ def graph(save):
                      color="navy", lw=lw)
     plt.legend(loc="best")
     if(save):
-        plt.savefig("Validation Curve")
+        plt.savefig("Images//Validation Curve")
     plt.show()
 
     title = "Learning Curves with RandomForest"
@@ -89,9 +89,25 @@ def graph(save):
 
     graphLearning(Rf, title, X, y, ylim=(0.0, 1.01), cv=cv, n_jobs=-1)
     if(save):
-        plt.savefig("Learning Curve")
+        plt.savefig("Images//Learning Curve")
     plt.show()
     return None;
+
+def loadModel():
+    loaded_model = pickle.load(open("model.pickle", 'rb'))
+    return loaded_model;
+
+
+def predict(file_path, name_path):
+    file = open(file_path, 'r')
+    name= name_path[name_path.rfind('\\')+1:]
+    Essay_Stats = stats.statForEssay(name, file_path, "")
+    with open(name_path+"\\"+name+"AvgStats.json") as j_file:
+        data = json.load(j_file)
+    X, target =  stats.CreateDifferentials(data, [Essay_Stats], 0)
+    model = loadModel();
+    print(model.predict_proba([X]))
+    print(X)
 
 def trainModel(saveIt):
     model_path = os.path.dirname(os.path.realpath(__file__))
