@@ -74,6 +74,48 @@ def getTopTrigrams(text):
 def getLexicalDiversity(text):
     return len(set(text)) / len(text)
 
+def partsOfSpeech(text):
+    text = word_tokenize(text)
+    text = nltk.pos_tag(text)
+    adjective = 0
+    preposition = 0
+    adverb = 0;
+    there = 0;
+    comparative = 0;
+    superlative = 0;
+    modal = 0;
+    conjunc = 0;
+    personal_pro = 0;
+    adv_comp =0;
+    deter = 0;
+    present_part = 0;
+    for i in range(len(text)):
+        if(text[i][1]=="JJ"):
+            adjective+=1;
+        elif(text[i][1]=="IN"):
+            preposition+=1;
+        elif(text[i][1]=="RB"):
+            adverb+=1;
+        elif(text[i][1]=="EX"):
+            there=+1;
+        elif(text[i][1]=="JJR"):
+            comparative+=1;
+        elif(text[i][1]=="JJS"):
+            superlative+=1;
+        elif(text[i][1]=="MD"):
+            modal+=1;
+        elif(text[i][1]=="CC"):
+            conjunc+=1;
+        elif(text[i][1]=="PRP"):
+            personal_pro+=1;
+        elif(text[i][1]=="RBR"):
+            adv_comp+=1;
+        elif(text[i][1]=="DT"):
+            deter+=1;
+        elif(text[i][1]=="VBG"):
+            present_part+=1;
+    return adjective, preposition, adverb, there, comparative,superlative, modal,conjunc,personal_pro,adv_comp,deter,present_part;
+
 def statForEssay(name, subdir, t_file):
     file = open(subdir+"\\"+t_file, "r",encoding='utf-8', errors='ignore')
     Stats = [];
@@ -85,6 +127,19 @@ def statForEssay(name, subdir, t_file):
     Stats.append(getNumberOfDependentClauses(text))
     Stats.append(numOfSemiColons(text))
     Stats.append(getLexicalDiversity(text))
+    adj, prep, adv, there, comp, super, modals, conjunc,personal_pro,adv_comp,deter,present_part = partsOfSpeech(text)
+    Stats.append(adj)
+    Stats.append(prep)
+    Stats.append(there)
+    Stats.append(adv)
+    Stats.append(there)
+    Stats.append(comp)
+    Stats.append(modals)
+    Stats.append(conjunc)
+    Stats.append(personal_pro)
+    Stats.append(adv_comp)
+    Stats.append(deter)
+    Stats.append(present_part)
     return Stats;
 
 def isSameAsNext(Essay_Stats, i):
@@ -104,6 +159,18 @@ def Average_Stats(Essay_Stats):
     average_dependent = 0;
     average_semicolons = 0;
     average_lexicalDiversity = 0;
+    average_adjectives = 0;
+    average_prepositions = 0;
+    average_adverbs = 0;
+    average_there = 0;
+    average_comparative = 0;
+    average_superlative = 0;
+    average_modals = 0;
+    average_conjunc = 0;
+    average_pp = 0;
+    average_adv_comp =0;
+    average_deter = 0;
+    average_present_part = 0;
     for i in range(len(Essay_Stats)):
         if isSameAsNext(Essay_Stats, i):
             average_sentence_length+=Essay_Stats[i][2]
@@ -111,6 +178,18 @@ def Average_Stats(Essay_Stats):
             average_dependent+=Essay_Stats[i][4]
             average_semicolons+=Essay_Stats[i][5]
             average_lexicalDiversity+=Essay_Stats[i][6]
+            average_adjectives+=Essay_Stats[i][7]
+            average_prepositions+=Essay_Stats[i][8]
+            average_adverbs+=Essay_Stats[i][9]
+            average_there+=Essay_Stats[i][10]
+            average_comparative+=Essay_Stats[i][11]
+            average_superlative+=Essay_Stats[i][12]
+            average_modals+=Essay_Stats[i][13]
+            average_conjunc+=Essay_Stats[i][14]
+            average_pp+=Essay_Stats[i][15]
+            average_adv_comp+=Essay_Stats[i][16]
+            average_deter+=Essay_Stats[i][17]
+            average_present_part+=Essay_Stats[i][18]
             file = open(Essay_Stats[i][1], "r",encoding='utf-8', errors='ignore')
             text_corpus+=file.read().lower() + " ";
             count+=1;
@@ -123,7 +202,18 @@ def Average_Stats(Essay_Stats):
             average_dependent+=Essay_Stats[i][4]
             average_semicolons+=Essay_Stats[i][5]
             average_lexicalDiversity+=Essay_Stats[i][6]
-
+            average_adjectives+=Essay_Stats[i][7]
+            average_prepositions+=Essay_Stats[i][8]
+            average_adverbs+=Essay_Stats[i][9]
+            average_there+=Essay_Stats[i][10]
+            average_comparative+=Essay_Stats[i][11]
+            average_superlative+=Essay_Stats[i][12]
+            average_modals+=Essay_Stats[i][13]
+            average_conjunc+=Essay_Stats[i][14]
+            average_pp+=Essay_Stats[i][15]
+            average_adv_comp+=Essay_Stats[i][16]
+            average_deter+=Essay_Stats[i][17]
+            average_present_part+=Essay_Stats[i][18]
             temp.append(average_sentence_length/count)
             temp.append(average_parentheticals/count)
             temp.append(average_dependent/count)
@@ -132,6 +222,18 @@ def Average_Stats(Essay_Stats):
             file = open(Essay_Stats[i][1], "r",encoding='utf-8', errors='ignore')
             text_corpus+=file.read().lower() + " ";
             temp.append(getLexicalDiversity(text_corpus))
+            temp.append(average_adjectives/count)
+            temp.append(average_prepositions/count)
+            temp.append(average_adverbs/count)
+            temp.append(average_there/count)
+            temp.append(average_comparative/count)
+            temp.append(average_superlative/count)
+            temp.append(average_modals/count)
+            temp.append(average_conjunc/count)
+            temp.append(average_pp/count)
+            temp.append(average_adv_comp/count)
+            temp.append(average_deter/count)
+            temp.append(average_present_part/count)
             temp.append(count)
             temp.append(getVocab(text_corpus))
             temp.append(getTopBigrams(text_corpus))
@@ -145,6 +247,16 @@ def Average_Stats(Essay_Stats):
             average_dependent = 0;
             average_semicolons = 0;
             average_lexicalDiversity = 0;
+            average_adjectives = 0;
+            average_prepositions = 0;
+            average_adverbs = 0;
+            average_there = 0;
+            average_comparative = 0;
+            average_superlative = 0;
+            average_modals = 0;
+            average_conjunc = 0;
+            average_adv_comp=0;
+            average_deter = 0;
 
     return Average_Stats;
 
@@ -157,7 +269,10 @@ def writeAverageStats(Average_Stats, JSON_Avg_Paths):
         temp.append(name)
         temp.append(Average_Stats[i][0]+"\\"+name+"AvgStats.json")
         JSON_Avg_Paths.append(temp)
-        count = Average_Stats[i][7]
+        count = Average_Stats[i][19]
+        vocab = 20;
+        bigram = 21;
+        trigram = 22;
         f.write("{\n\"Name\":\""+name+"\",")
         f.write("\n\"Number of Essays\":"+str(count)+",")
         f.write("\n\"Average Sentence Length\":"+str(Average_Stats[i][1])+",")
@@ -166,42 +281,54 @@ def writeAverageStats(Average_Stats, JSON_Avg_Paths):
         f.write("\n\"Average # of Semicolons\":"+str(Average_Stats[i][4])+",")
         f.write("\n\"Average Essay Lexical Diversity\":"+str(Average_Stats[i][5])+",")
         f.write("\n\"Average Total Lexical Diversity\":"+str(Average_Stats[i][6])+",")
+        f.write("\n\"Average # of Adjectives\":"+str(Average_Stats[i][7])+",")
+        f.write("\n\"Average # of Prepositions\":"+str(Average_Stats[i][8])+",")
+        f.write("\n\"Average # of Adverbs\":"+str(Average_Stats[i][9])+",")
+        f.write("\n\"Average # of Existential There\":"+str(Average_Stats[i][10])+",")
+        f.write("\n\"Average # of Comparatives\":"+str(Average_Stats[i][11])+",")
+        f.write("\n\"Average # of Superlatives\":"+str(Average_Stats[i][12])+",")
+        f.write("\n\"Average # of Modals\":"+str(Average_Stats[i][13])+",")
+        f.write("\n\"Average # of Coordinating Conjunctions\":"+str(Average_Stats[i][14])+",")
+        f.write("\n\"Average # of Personal Pronouns\":"+str(Average_Stats[i][15])+",")
+        f.write("\n\"Average # of Comparative Adverbs\":"+str(Average_Stats[i][16])+",")
+        f.write("\n\"Average # of Determiners\":"+str(Average_Stats[i][17])+",")
+        f.write("\n\"Average # of Present Participles\":"+str(Average_Stats[i][18])+",")
         f.write("\n\"Vocabulary\":[")
-        for j in range(len(Average_Stats[i][8])):
-            if(j!=len(Average_Stats[i][8])-1):
-                f.write("\""+Average_Stats[i][8][j][0]+"\",")
+        for j in range(len(Average_Stats[i][vocab])):
+            if(j!=len(Average_Stats[i][vocab])-1):
+                f.write("\""+Average_Stats[i][vocab][j][0]+"\",")
             else:
-                f.write("\""+Average_Stats[i][8][j][0]+"\"],")
+                f.write("\""+Average_Stats[i][vocab][j][0]+"\"],")
         f.write("\n\"Vocabulary Frequency\":[\n")
-        for j in range(len(Average_Stats[i][8])):
-            if(j!=len(Average_Stats[i][8])-1):
-                f.write(str(Average_Stats[i][8][j][1]/count)+",")
+        for j in range(len(Average_Stats[i][vocab])):
+            if(j!=len(Average_Stats[i][vocab])-1):
+                f.write(str(Average_Stats[i][vocab][j][1]/count)+",")
             else:
-                f.write(str(Average_Stats[i][8][j][1]/count)+"\n],")
+                f.write(str(Average_Stats[i][vocab][j][1]/count)+"\n],")
         f.write("\n\"Bigram\":[\n")
-        for j in range(len(Average_Stats[i][9])):
-            if(j!=len(Average_Stats[i][9])-1):
-                f.write("\""+Average_Stats[i][9][j][0][0]+" "+Average_Stats[i][9][j][0][1]+"\",")
+        for j in range(len(Average_Stats[i][bigram])):
+            if(j!=len(Average_Stats[i][bigram])-1):
+                f.write("\""+Average_Stats[i][bigram][j][0][0]+" "+Average_Stats[i][bigram][j][0][1]+"\",")
             else:
-                f.write("\""+Average_Stats[i][9][j][0][0]+" "+Average_Stats[i][9][j][0][1]+"\"],")
+                f.write("\""+Average_Stats[i][bigram][j][0][0]+" "+Average_Stats[i][bigram][j][0][1]+"\"],")
         f.write("\n\"Bigram Frequency\":[\n")
-        for j in range(len(Average_Stats[i][9])):
-            if(j!=len(Average_Stats[i][9])-1):
-                f.write(str(Average_Stats[i][9][j][1]/count)+",")
+        for j in range(len(Average_Stats[i][bigram])):
+            if(j!=len(Average_Stats[i][bigram])-1):
+                f.write(str(Average_Stats[i][bigram][j][1]/count)+",")
             else:
-                f.write(str(Average_Stats[i][9][j][1]/count)+"\n],")
+                f.write(str(Average_Stats[i][bigram][j][1]/count)+"\n],")
         f.write("\n\"Trigram\":[\n")
-        for j in range(len(Average_Stats[i][10])):
-            if(j!=len(Average_Stats[i][10])-1):
-                f.write("\""+Average_Stats[i][10][j][0][0]+" "+Average_Stats[i][10][j][0][1]+" "+Average_Stats[i][10][j][0][2]+"\",")
+        for j in range(len(Average_Stats[i][trigram])):
+            if(j!=len(Average_Stats[i][trigram])-1):
+                f.write("\""+Average_Stats[i][trigram][j][0][0]+" "+Average_Stats[i][trigram][j][0][1]+" "+Average_Stats[i][trigram][j][0][2]+"\",")
             else:
-                f.write("\""+Average_Stats[i][10][j][0][0]+" "+Average_Stats[i][10][j][0][1]+" "+Average_Stats[i][10][j][0][2]+"\"],")
+                f.write("\""+Average_Stats[i][trigram][j][0][0]+" "+Average_Stats[i][trigram][j][0][1]+" "+Average_Stats[i][trigram][j][0][2]+"\"],")
         f.write("\n\"Trigram Frequency\":[\n")
-        for j in range(len(Average_Stats[i][10])):
-            if(j!=len(Average_Stats[i][10])-1):
-                f.write(str(Average_Stats[i][10][j][1]/count)+",")
+        for j in range(len(Average_Stats[i][trigram])):
+            if(j!=len(Average_Stats[i][trigram])-1):
+                f.write(str(Average_Stats[i][trigram][j][1]/count)+",")
             else:
-                f.write(str(Average_Stats[i][10][j][1]/count)+"\n]\n}")
+                f.write(str(Average_Stats[i][trigram][j][1]/count)+"\n]\n}")
     return True;
 
 
@@ -219,6 +346,18 @@ def CreateDifferentials(Target_Data, Given_Values, i):
     diffInSemicolons = Target_Data['Average # of Semicolons']-Given_Values[i][5]
     diffInEssayLexicalDiversity = Target_Data['Average Essay Lexical Diversity']-Given_Values[i][6]
     diffInTotalLexicalDiversity = Target_Data['Average Total Lexical Diversity']-Given_Values[i][6]
+    diffInAdjectives = Target_Data['Average # of Adjectives']-Given_Values[i][7]
+    diffInPrepositions = Target_Data['Average # of Prepositions']-Given_Values[i][8]
+    diffInAdverbs = Target_Data['Average # of Adverbs']-Given_Values[i][9]
+    diffInThere = Target_Data['Average # of Existential There']-Given_Values[i][10]
+    diffInComparatives = Target_Data['Average # of Comparatives']-Given_Values[i][11]
+    diffInSuperlatives = Target_Data['Average # of Superlatives']-Given_Values[i][12]
+    diffInModals = Target_Data['Average # of Modals']-Given_Values[i][13]
+    diffInCC = Target_Data['Average # of Coordinating Conjunctions']-Given_Values[i][14]
+    diffInPP = Target_Data['Average # of Personal Pronouns']-Given_Values[i][15]
+    diffInAdvComp = Target_Data['Average # of Comparative Adverbs']-Given_Values[i][16]
+    diffInDeters = Target_Data['Average # of Determiners']-Given_Values[i][17]
+    diffInPresentParts = Target_Data['Average # of Present Participles']-Given_Values[i][18]
     file = open(Given_Values[i][1], "r",encoding='utf-8', errors='ignore')
     text= file.read()
     X_Vocab = getVocab(text);
@@ -242,7 +381,9 @@ def CreateDifferentials(Target_Data, Given_Values, i):
         if(Y_Trigram[i]==X_Trigram[i][0]):
             trigram_percentage+=1;
     trigram_percentage/=len(Y_Trigram);
-    X = [diffInSentenceLength,diffInParentheticals,diffInDependent,diffInSemicolons, diffInEssayLexicalDiversity,diffInTotalLexicalDiversity, vocab_percentage, bigram_percentage, trigram_percentage]
+    X = [diffInSentenceLength,diffInParentheticals,diffInDependent,diffInSemicolons, diffInEssayLexicalDiversity,diffInTotalLexicalDiversity, vocab_percentage,
+        diffInAdjectives, diffInPrepositions, diffInAdverbs, diffInThere, diffInComparatives, diffInSuperlatives, diffInModals, diffInCC, diffInAdvComp, diffInDeters,
+        diffInPresentParts]
     return X, Target;
 
 def WriteTrainingJson(path, X_Values, Target):
@@ -285,8 +426,6 @@ def CreateInput(JSON_Avg_Paths):
             X_Values.append(temp_X)
             Target.append(temp_Y)
     WriteTrainingJson(dir_path+"\\startingDataset.json",X_Values, Target)
-    print(X_Values)
-    print(Target)
     return None;
 
 def createStats(inputFile):

@@ -7,6 +7,18 @@
 "Average # of Semicolons":1.0,
 "Average Essay Lexical Diversity":0.017793603791766283,
 "Average Total Lexical Diversity":0.003656135745757945,
+"Average # of Adjectives":29.5,
+"Average # of Prepositions":61.5,
+"Average # of Adverbs":0.5,
+"Average # of Existential There":15.25,
+"Average # of Comparatives":0.5,
+"Average # of Superlatives":0.25,
+"Average # of Modals":1.5,
+"Average # of Coordinating Conjunctions":17.0,
+"Average # of Personal Pronouns":74.5,
+"Average # of Comparative Adverbs":1.0,
+"Average # of Determiners":54.25,
+"Average # of Present Participles":65.25,
 "Vocabulary":["living","scarlet","puritan","deceives","town","punished","how","natural","would","story","discoveries","dulce","et","decorum","est","while","about","use","language","reinforce","soldiers","only","over","attitude","more","like",";","it","him","book","been","diction","rest","were","protect","contributes","she","city","are","describes","place","poem","reader","not","father","mccarthy","patterns","than","tone","speakers","was","time","tunnel","audience","shows","humanity","law","owen","these","personification","because","sassoon","from","both","vivid","with","trout","universe","have",":","hester","deception","their","speaker","sin","also","has","for","he","imagery","by","uses","kabul","war","his","her","on","dimmesdale","this","as","that","is","in","a","to","and","of",".",",","the"],
 "Vocabulary Frequency":[
 0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.75,1.75,1.75,1.75,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.25,2.25,2.25,2.25,2.5,2.5,2.5,2.5,2.5,2.75,2.75,3.25,3.25,3.25,3.25,3.5,3.5,3.5,3.75,4.0,4.25,4.75,5.75,7.0,7.25,8.75,10.75,15.0,20.0,23.5,24.0,35.5
