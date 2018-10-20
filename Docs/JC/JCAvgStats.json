@@ -1,0 +1,24 @@
+{
+"Name":"JC",
+"Number of Essays":1,
+"Average Sentence Length":28.128205128205128,
+"Average # of Parentheticals":11.0,
+"Average # of dependent clauses":18.0,
+"Average # of Semicolons":1.0,
+"Average Essay Lexical Diversity":0.010118577075098814,
+"Average Total Lexical Diversity":0.007429655390452102,
+"Vocabulary":["master","being","how","even","recurring","abused","another","character","who","equally","you","initially","haretons","thus","abusive","part","me","divide","through","brontes","more","vengeful","first","calls","them","if","been","nelly","she","marrying","mine","same","cathys","two","cruel","able","an","grange","generation","hindley","earnshaw","second","education","happiness","[","]","his","edgar","i","be","at","!","abuse","are","have","on","says","had","book","both","because","status","he","which","wuthering","heights","characters","generations","linton","for","wealth","with","from","love","not","when","but","cathy","social","class","him","her","(",")","it","bronte","is","that","as","catherine","a","hareton","heathcliff","in","to",".","of","and","the",","],
+"Vocabulary Frequency":[
+2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,5.0,5.0,5.0,5.0,5.0,5.0,6.0,6.0,6.0,6.0,6.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,8.0,8.0,9.0,9.0,10.0,10.0,10.0,10.0,10.0,11.0,11.0,11.0,12.0,12.0,13.0,13.0,14.0,16.0,17.0,18.0,19.0,19.0,36.0,37.0,53.0,58.0,69.0
+],
+"Bigram":[
+"to marry","that he","heathcliff is","is not","a result","result of","of a","focus on","the grange","class and","hareton is","master of","him and","and catherine","from marrying","and the","recurring abuse","second generation","with the","hareton in","and abuse","cruel and","and abusive","part of","as an","the more","because of","catherine and","heights and","of heathcliff","in both","but the","wealth and","love and","the social","the same","status and","the two","is the","able to","linton heathcliff","and hareton","both generations","social class","the second","and wealth","the book","wuthering heights","in the","of the"],
+"Bigram Frequency":[
+2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,7.0,8.0,11.0
+],
+"Trigram":[
+"problems like class","like class and","class and abuse","and abuse but","abuse but the","second generation manages","generation manages to","manages to resolve","to resolve these","resolve these issues","these issues by","issues by setting","by setting aside","setting aside the","aside the emphasis","the emphasis on","emphasis on wealth","on wealth and","and status bronte","status bronte believes","bronte believes that","believes that education","that education destroys","education destroys social","destroys social class","social class divides","both parts of","because of the","catherine and cathy","of wuthering heights","heights and thrushcross","and thrushcross grange","generation consists of","both generations characters","but the second","wealth and status","love and happiness","of the social","i shall be","a result of","master of the","him and catherine","in the second","the second generation","cruel and abusive","part of the","of the book","wuthering heights and","in both generations","status and wealth"],
+"Trigram Frequency":[
+1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,3.0
+]
+}
