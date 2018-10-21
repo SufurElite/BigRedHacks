@@ -70,8 +70,7 @@ namespace BigRedHacks
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = "python.exe";
-
-            Directory.SetCurrentDirectory("C:\\Users\\Rufus Behr\\Desktop\\BigRedHacks");
+            
             string student_path2 = student_path.Replace(" ", "[").Replace("\\", "]");
             string file_path2 = file_path.Replace(" ", "[").Replace("\\", "]");
             start.Arguments = string.Format("{0} {1} {2}","main.py", file_path2, student_path2);
@@ -92,8 +91,6 @@ namespace BigRedHacks
         {
             if (file_path != "" && student_path != "")
             {
-
-                Directory.SetCurrentDirectory("C:\\Users\\Rufus Behr\\Desktop\\BigRedHacks");
                 string fileName = System.IO.Path.GetFileName(file_path);
                 string sourcePath = System.IO.Path.GetDirectoryName(file_path);
                 string targetPath = student_path;

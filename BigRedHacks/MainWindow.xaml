@@ -3,31 +3,35 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         xmlns:local="clr-namespace:BigRedHacks"
         mc:Ignorable="d"
         Title="Plagarism Detector" ResizeMode="NoResize" Height="381.084" Width="800">
+
 	<Grid Margin="0,0,3.6,4.2">
-		<Button HorizontalAlignment="Left" Margin="38,73,0,0" VerticalAlignment="Top" Width="96" Height="56" Click="Select_Student">
+		<Button HorizontalAlignment="Left" Margin="38,73,0,0" VerticalAlignment="Top" Width="110" Height="56" Click="Select_Student">
 			<TextBlock TextWrapping="Wrap" TextAlignment="Center"> Select Student</TextBlock>
 		</Button>
-		<Button HorizontalAlignment="Left" Margin="38,159,0,0" VerticalAlignment="Top" Width="96" Height="56" Click="Select_Essay">
-			<TextBlock TextWrapping="Wrap" Width="86" TextAlignment="Center">Select New Essay</TextBlock>
+		<Button HorizontalAlignment="Left" Margin="38,159,0,0" VerticalAlignment="Top" Width="110" Height="56" Click="Select_Essay">
+			<TextBlock TextWrapping="Wrap" Width="70" TextAlignment="Center">Select New Essay</TextBlock>
 		</Button>
-		<Button HorizontalAlignment="Left" Margin="38,243,0,-52.2" VerticalAlignment="Top" Width="96" Height="56" Click="Run_Model">
+		<Button HorizontalAlignment="Left" Margin="38,243,0,0" VerticalAlignment="Top" Width="110" Height="56" Click="Run_Model">
 			<TextBlock TextWrapping="Wrap" Width="86" TextAlignment="Center">Run Model</TextBlock>
 		</Button>
-		<Button HorizontalAlignment="Left" Height="46" Margin="622,272,0,0" VerticalAlignment="Top" Width="138" Click="Update_Stats">
+		<Button HorizontalAlignment="Left" Height="46" Margin="622,253,0,0" VerticalAlignment="Top" Width="138" Click="Update_Stats">
 			<TextBlock>Update Stats</TextBlock>
 		</Button>
 		<TextBlock Name="Probability" HorizontalAlignment="Left" Height="40" Margin="644,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
 		<DataGrid HorizontalAlignment="Left" Height="100" Margin="1260,206,-570,-36.8" VerticalAlignment="Top" Width="100"/>
-		<ListView Name ="ListView1" HorizontalAlignment="Left" Height="196" Margin="288,73,0,0" VerticalAlignment="Top" Width="220">
+		<ListView Name ="ListView1" HorizontalAlignment="Left" Height="269" Margin="254,64,0,0" VerticalAlignment="Top" Width="276">
 			<ListView.View>
 				<GridView>
-					<GridViewColumn Header="Name" Width="219" DisplayMemberBinding="{Binding Name}" />
+					<GridViewColumn Header="Essay Titles:" Width="219" DisplayMemberBinding="{Binding Name}" />
 				</GridView>
 			</ListView.View>
 		</ListView>
+		<Label Content="Plagiarism Detector" HorizontalAlignment="Center" Height="68" Margin="213,10,205,0" VerticalAlignment="Top" Width="372" FontFamily="Segoe UI Black" FontSize="36"/>
 
 	</Grid>
 </Window>

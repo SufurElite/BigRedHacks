@@ -13,3 +13,10 @@ C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.c
 C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.csproj.CoreCompileInputs.cache
 C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.exe
 C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.pdb
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\MaterialDesignColors.dll
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.csproj.CopyComplete
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\App.baml
