@@ -1,0 +1,36 @@
+{
+"Name":"Jay",
+"Number of Essays":4,
+"Average Sentence Length":25.449372758567787,
+"Average # of Parentheticals":25.75,
+"Average # of dependent clauses":34.5,
+"Average # of Semicolons":2.25,
+"Average Essay Lexical Diversity":0.006348770407345299,
+"Average Total Lexical Diversity":0.0010387005497949462,
+"Average # of Adjectives":202.75,
+"Average # of Prepositions":285.25,
+"Average # of Adverbs":1.0,
+"Average # of Existential There":81.75,
+"Average # of Comparatives":1.0,
+"Average # of Superlatives":19.25,
+"Average # of Modals":19.25,
+"Average # of Coordinating Conjunctions":67.75,
+"Average # of Personal Pronouns":104.75,
+"Average # of Comparative Adverbs":10.0,
+"Average # of Determiners":189.75,
+"Average # of Present Participles":120.25,
+"Vocabulary":["throughout","been","become","about","him","should","colleges","academic","new","tuition-free","also","american","dad","make","segregation","modern","boys","its","when","only","play","some","most","emotional","online","degree","one","many","all","free","there","gregs","reshef","school","novel","loans","research","mom","institutions","while","social","or","were","they","but","who","men","would","people","can","student","public","at","gender","women","than","tuition","has","he","not","an","[","]","these","on","which","from","such","it","have","be","this","higher","their","students","university","more","greg","kinney","his","universities","education","by","college","with","are","for","as","(",")","is","that","a","in","and","to","of",".","the",","],
+"Vocabulary Frequency":[
+2.75,2.75,2.75,2.75,2.75,2.75,2.75,2.75,2.75,2.75,3.0,3.0,3.0,3.0,3.0,3.0,3.25,3.25,3.25,3.25,3.25,3.25,3.25,3.5,3.5,3.5,3.75,3.75,3.75,3.75,4.0,4.0,4.0,4.25,4.25,4.25,4.5,4.5,4.75,4.75,4.75,4.75,4.75,5.0,5.0,5.0,5.25,5.25,5.25,5.25,5.5,5.75,5.75,6.0,6.0,6.0,6.0,6.5,6.5,6.5,6.75,7.25,7.25,8.5,8.75,8.75,9.0,9.0,9.0,9.25,9.75,9.75,10.0,10.25,10.5,10.5,10.75,11.0,11.5,12.0,12.0,12.5,12.75,12.75,14.5,18.25,20.5,24.75,25.75,25.75,28.75,37.75,43.25,50.25,56.75,71.75,72.75,75.5,106.0,136.25
+],
+"Bigram":[
+"women are","to a","that he","the fact","with the","u s","college degree","appeals to","a college","the new","york times","of their","these institutions","throughout the","men are","and the","in order","order to","of his","is that","of these","the modern","universities in","the people","by the","for a","in a","on the","university of","new york","of college","that are","is a","that the","to make","sex segregation","public universities","to be","are more","of higher","it is","the university","the novel","to the","as a","of a","such as","higher education","in the","of the"],
+"Bigram Frequency":[
+1.75,1.75,1.75,1.75,1.75,1.75,1.75,1.75,1.75,1.75,1.75,1.75,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.25,2.25,2.25,2.25,2.25,2.25,2.25,2.5,2.5,2.5,2.5,2.5,2.75,3.0,3.0,3.0,3.25,3.25,3.5,3.5,3.5,4.0,5.5,7.75,14.0,15.0
+],
+"Trigram":[
+"a college education","higher education reshef","higher education system","of university of","both of which","the issue of","to make higher","make higher education","to pay back","marcus germany proves","public universities in","visiting a country","york times the","times the new","york times company","throughout the novel","there is a","to be more","women are more","greg and rowley","as a result","a variety of","in the u","the university is","of the term","the term university","appeals to logos","a college degree","the united states","germany proves tuition-free","proves tuition-free college","males and females","the concept of","in addition to","diary of a","of a wimpy","a wimpy kid","the fact that","as well as","the u s","in the novel","in the modern","of the university","universities in the","the new york","new york times","in order to","university of the","of the people","of higher education"],
+"Trigram Frequency":[
+0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.25,1.25,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.75,1.75,1.75,1.75,1.75,1.75,2.0,2.0,2.0,2.75
+]
+}
