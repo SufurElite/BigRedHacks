@@ -1,0 +1,15 @@
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\BigRedHacks.exe.config
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\BigRedHacks.exe
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\bin\Debug\BigRedHacks.pdb
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.csprojAssemblyReference.cache
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\MainWindow.g.cs
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\App.g.cs
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks_MarkupCompile.cache
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks_MarkupCompile.lref
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\MainWindow.baml
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.g.resources
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.Properties.Resources.resources
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.csproj.GenerateResource.cache
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.csproj.CoreCompileInputs.cache
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.exe
+C:\Users\Rufus Behr\source\repos\BigRedHacks\BigRedHacks\obj\Debug\BigRedHacks.pdb

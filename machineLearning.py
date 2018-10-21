@@ -106,8 +106,8 @@ def predict(file_path, name_path):
         data = json.load(j_file)
     X, target =  stats.CreateDifferentials(data, [Essay_Stats], 0)
     model = loadModel();
-    print(model.predict_proba([X]))
-    print(X)
+    print(model.predict_proba([X])[0][0])
+
 
 def trainModel(saveIt):
     model_path = os.path.dirname(os.path.realpath(__file__))
