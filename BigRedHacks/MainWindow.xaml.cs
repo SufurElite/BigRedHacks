@@ -70,30 +70,52 @@ namespace BigRedHacks
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = "python.exe";
-            MessageBoxButton button = MessageBoxButton.YesNoCancel;
-           
-            student_path = student_path.Replace(" ", "[").Replace("\\", "]");
-            file_path = file_path.Replace(" ", "[").Replace("\\", "]");
-            MessageBoxResult result3 = System.Windows.MessageBox.Show(file_path, "Confirm The Essay", button);
-            start.Arguments = string.Format("{0} {1} {2}","main.py",file_path, student_path);
+
+            Directory.SetCurrentDirectory("C:\\Users\\Rufus Behr\\Desktop\\BigRedHacks");
+            string student_path2 = student_path.Replace(" ", "[").Replace("\\", "]");
+            string file_path2 = file_path.Replace(" ", "[").Replace("\\", "]");
+            start.Arguments = string.Format("{0} {1} {2}","main.py", file_path2, student_path2);
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
-
             string result = "";
             using (Process process = Process.Start(start))
             {
                 using (StreamReader reader = process.StandardOutput)
                 {
                     result = reader.ReadToEnd();
-
-                    MessageBoxResult result4 = System.Windows.MessageBox.Show(result, "Confirm The Essay", button);
                 }
             }
+            Probability.Text = "Plagarism Probability: " + float.Parse(result,System.Globalization.CultureInfo.InvariantCulture)*100+"%";
 
         }
         private void Update_Stats(object sender, RoutedEventArgs e)
         {
+            if (file_path != "" && student_path != "")
+            {
 
+                Directory.SetCurrentDirectory("C:\\Users\\Rufus Behr\\Desktop\\BigRedHacks");
+                string fileName = System.IO.Path.GetFileName(file_path);
+                string sourcePath = System.IO.Path.GetDirectoryName(file_path);
+                string targetPath = student_path;
+
+                // Use Path class to manipulate file and directory paths.
+                string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+                string destFile = System.IO.Path.Combine(targetPath, fileName);
+
+                System.IO.File.Copy(sourceFile, destFile, true);
+
+                fileName = System.IO.Path.GetFileName(file_path);
+                destFile = System.IO.Path.Combine(targetPath, fileName);
+                System.IO.File.Copy(file_path, destFile, true);
+
+                ProcessStartInfo start = new ProcessStartInfo();
+                start.FileName = "python.exe";
+
+                start.Arguments = string.Format("{0}", "main.py");
+                start.UseShellExecute = false;
+                start.RedirectStandardOutput = true;
+                Process.Start(start);
+            }
         }
     }
     public class FileName

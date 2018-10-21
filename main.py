@@ -8,8 +8,8 @@ def main():
         machineLearning.predict(file_path, path_name)
         return None;
     stats.createStats(True);
-    machineLearning.graph(True);
-    machineLearning.trainModel(False);
+    #machineLearning.graph(True);
+    machineLearning.trainModel(True);
 
     return None;
 
